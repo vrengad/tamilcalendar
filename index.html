@@ -4,109 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tamil Calendar & Daily Inspiration</title>
-    <!-- Google Fonts: Inter for English, Noto Sans Tamil for Tamil support -->
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="container">
-            <h1>Tamil Calendar & Daily Inspiration</h1>
-            <p class="subtitle">Simple Tamil date, important days, and motivational quotes.</p>
-        </div>
-    </header>
+<header class="main-header">
+    <div class="container">
+        <h1>Tamil Calendar & Daily Inspiration</h1>
+        <p class="subtitle">Simple Tamil date, important days, and motivational quotes.</p>
+    </div>
+</header>
 
-    <main class="container">
-        
-        <!-- Today's Information Section -->
-        <section class="today-section">
-            <div class="card today-card">
-                <div class="card-header">
-                    <h2>Today's Information</h2>
-                </div>
-                <div class="card-body">
+<main class="container">
+
+    <!-- TODAY -->
+    <section class="today-section">
+        <div class="card today-card">
+            <div class="card-header">
+                <h2>Today's Information</h2>
+            </div>
+            <div class="card-body">
+
+                <div class="date-display">
                     <div class="gregorian-date" id="gregorian-date"></div>
                     <div class="tamil-date" id="tamil-date"></div>
-                    
-                    <div class="moon-phase" id="moon-phase"></div>
-
-
-                    <div class="highlights">
-                        <h3>Today’s Highlights</h3>
-                        <ul>
-                            <li><strong>Good time (Nalla neram):</strong> 10:30 AM - 11:30 AM</li>
-                            <li><strong>Raahu kaalam:</strong> 1:30 PM - 3:00 PM</li>
-                            <li><strong>Yamagandam:</strong> 6:00 AM - 7:30 AM</li>
-                            <li><strong>Kuligai:</strong> 9:00 AM - 10:30 AM</li>
-                        </ul>
-                    </div>
                 </div>
+
+                <div class="moon-phase" id="moon-phase"></div>
+
+                <div class="highlights">
+                    <h3>Today’s Highlights</h3>
+                    <ul>
+                        <li><strong>Good time (Nalla neram):</strong> 10:30 AM - 11:30 AM</li>
+                        <li><strong>Raahu kaalam:</strong> 1:30 PM - 3:00 PM</li>
+                        <li><strong>Yamagandam:</strong> 6:00 AM - 7:30 AM</li>
+                        <li><strong>Kuligai:</strong> 9:00 AM - 10:30 AM</li>
+                    </ul>
+                </div>
+
             </div>
-        </section>
-
-        <!-- Important Days This Month -->
-        <section class="important-days-section">
-            <h2>Important Days This Month</h2>
-            <div class="grid-container">
-                <!-- Card 1 -->
-                <div class="card event-card">
-                    <div class="event-date">Nov 29</div>
-                    <div class="event-details">
-                        <h3>Pournami</h3>
-                        <p>Full Moon Day - Special Poojas</p>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="card event-card">
-                    <div class="event-date">Dec 13</div>
-                    <div class="event-details">
-                        <h3>Amavasai</h3>
-                        <p>New Moon Day - Ancestor Worship</p>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="card event-card">
-                    <div class="event-date">Dec 15</div>
-                    <div class="event-details">
-                        <h3>Pradosham</h3>
-                        <p>Shiva Pooja - Evening 4:30 PM</p>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div class="card event-card highlight-event">
-                    <div class="event-date">Dec 05</div>
-                    <div class="event-details">
-                        <h3>Karthigai Deepam</h3>
-                        <p>Festival of Lights</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Motivational Quotes Section -->
-        <section class="quotes-section">
-            <h2>Tamil Motivational Quotes</h2>
-            <div class="card quote-card">
-                <div class="quote-content">
-                    <p class="tamil-quote" id="tamil-quote">"முயற்சி திருவினையாக்கும்."</p>
-                    <p class="english-meaning" id="english-meaning">Effort will bring success.</p>
-                </div>
-                <button id="new-quote-btn" class="btn-primary">Show another quote</button>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="main-footer">
-        <div class="container">
-            <p>Sample site for personal use – Veera’s Tamil Calendar Test Page</p>
         </div>
-    </footer>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- IMPORTANT DAYS -->
+    <section class="important-days-section">
+        <h2>Important Days This Month</h2>
+        <div class="grid-container" id="important-days"></div>
+    </section>
+
+    <!-- QUOTES -->
+    <section class="quotes-section">
+        <h2>Tamil Motivational Quotes</h2>
+        <div class="card quote-card">
+            <div class="quote-content">
+                <p class="tamil-quote" id="tamil-quote"></p>
+                <p class="english-meaning" id="english-meaning"></p>
+            </div>
+            <button id="new-quote-btn" class="btn-primary">Show another quote</button>
+        </div>
+    </section>
+
+</main>
+
+<footer class="main-footer">
+    <div class="container">
+        <p>Sample site for personal use – Veera’s Tamil Calendar</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
-
